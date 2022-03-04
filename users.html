@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="SLike/Favicon.ico" type="image/icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Online bookstore</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light " style="border-bottom: 2.5px solid  #f69272;"><!--Navbar-->
+        <a href="Index.html" class="navbar-brand "><img src="SLike/Logo.png" id="logo" style="height:4rem;"
+                alt="logo">
+        </a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapseNavbar"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapseNavbar">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link" href="Index.html">Naša ponuda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="users.html">Korisnici</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="  nav-link" data-toggle="modal" data-target="#loginModal">Prijavi se</a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav-link" data-toggle="modal" data-target="#registerModal">Registruj se</a>
+                </li>
+                <li class="nav-item">
+                    <a class="  btk btn-light nav-link " href="shopping-basket.html" title="Korpa">Korpa <span
+                            class=" fas fa-shopping-cart text-dark"></span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="modal fade" id="loginModal" tabindex="-1" role="login" aria-labelledby="loginModal" aria-hidden="true">
+            <!--Modal za prijavu-->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="loginModal">Prijavi se</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+    
+                    <div class="modal-body">
+                        <form id="login_form">
+                            <div class="form-group">
+                                <label for="emailAdress">E-mail:</label>
+                                <input type="email" class="form-control" id="emailAdress" placeholder="Unesite vaš e-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="loginpassword">Lozinka:</label>
+                                <input type="password" class="form-control" id="loginpassword"
+                                    placeholder="Unesite lozinku">
+                            </div>
+                            <button type="submit" class="btn btn-block font-weight-bold"
+                                style="background-color:#f69272;">Prijavi se</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="registerModal" tabindex="-1" role="register" aria-labelledby="registerModal"
+        aria-hidden="true">
+        <!--Modal za registracij -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="registerModal">Registruj se</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form id="register_form">
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="ime">Ime:</label>
+                                <input type="text" class="form-control" id="ime" placeholder="Unesite ime">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="prezime">Prezime:</label>
+                                <input type="text" class="form-control" id="prezime" placeholder="Unesite prezime">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Korisničko ime:</label>
+                            <input type="text" id="username" class="form-control" placeholder="Unesite korisničko ime">
+                        </div>
+                        <div class="form-group">
+                            <label for="email2">E-mail:</label>
+                            <input type="email" id="email2" class="form-control" placeholder="Unesite svoj e-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Lozinka:</label>
+                            <input type="password" id="password2" class="form-control"
+                                placeholder="Unesite svoju lozinku">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Broj telefona:</label>
+                            <input id="phone" type="tel" class="form-control" placeholder="Unesite vaš broj telefona">
+                        </div>
+                        <div class="form-group">
+                            <label for="godinaRodjenja"> Godina rođenja:</label>
+                            <input type="date" id="godinaRodjenja" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="adresa"> Adresa:</label>
+                            <input type="text" id="adresa" class="form-control" placeholder="Unesite adresu stanovanja">
+                        </div>
+                        <button type="submit" class="btn btn-block font-weight-bold"
+                        style="background-color:#f69272;">Registruj se</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container-fluid d-none d-md-block d-xl-block d-lg-block">
+            <div class="row "> <!--TAble za desktop-->
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped ">
+                            <thead>
+                                <tr class=" p-0 m-0">
+                                    <td  class="font-weight-bold align-middle font-weight-bold larger-50 "> Korisnčiko ime</td>
+                                    <td colspan="2" class="font-weight-bold align-middle  larger-50">E-mail</td>
+                                    <td class=""></td>
+                            </thead>
+                            <tbody id="table_body">
+                                <!-- <tr>
+                                    <td class="align-middle"> <span>Ime korisnika</span></td>
+                                    <td  class="align-middle"><span> E-mail</span></span></td>
+                                    <td class="">
+                                        <button class="mx-0 align-middle text-center btn btn-dark">Detaljnije</button>
+                                    </td>
+                                    <td class="mx-0 p-0 align-middle text-center ">
+                                        <button class="btn text-secondary fas fa-trash-alt  p-0 larger-80" title="obriši"></button>
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container d-lg-none d-sm-block d-md-none d-xl-none  ">
+            <div class="row "> <!--TAble za mobile-->
+                <div class="col-12 d-flex px-2">
+                    <div class=" table-resposive table-striped">
+                        <table class=" mt-2 mb-5">
+                            <thead>
+                            </thead>
+                            <tbody id="mobileTableBody">
+                                <!-- <tr id="username_row_mobile">
+                                    <td  class="font-weight-bold larger-50 p-2">
+                                        Korisnčiko ime:
+                                    </td>
+                                    <td class="p-2 text-center">
+                                        <span class="larger-50">Ime korisnika</span>
+                                    </td>
+                                </tr>
+                                <tr class="" id="email_row_mobile">
+                                    <td class="font-weight-bold p-2 " >
+                                        <span class="larger-50">E-mail:</span>
+                                    </td>
+                                    <td  class="larger-50 p-2">
+                                        <span>E-mail</span>
+                                    </td>
+                                </tr>
+                                <tr id="buttons_row">
+                                    <td class="text-center">
+                                        <button class="mx-0 align-middle text-center btn btn-dark">Detaljnije</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn text-secondary fas fa-trash-alt  p-2 larger-80" title="obriši"></button>
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+
+
+
+
+
+
+
+        <div class="row mt-5">
+            <footer class="footer">
+                <p class=" d-sm-block Copyright d-inline mx-3"> Copyright © 2020 PetarK</p>
+            <div class="mx-3 socials ">
+                    <p class="d-inline ">Zapratite nas:</p>
+                    <a href="#" class=" text-dark"><i class="socials-fab fab fa-facebook-square "></i></a>
+                    <a href="#" class=" text-dark"><i class="socials-fab fab fa-twitter-square"></i></a>
+                    <a href="#" class="text-dark"><i class="socials-fab fab fa-instagram"></i></a>
+            </div>
+        </footer>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="JS/users.js"></script>
+    <script src="JS/login.js"></script>
+
+</body>

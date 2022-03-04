@@ -1,0 +1,169 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+
+.text-large{
+    font-size: 400% !important;
+}
+
+.larger-20{
+    font-size: 120% !important ;
+}
+.larger-80{
+    font-size:180% ;
+}
+.larger-50{
+    font-size:150% ;
+}
+
+.larger-250{
+    font-size: 250%;
+}
+.text-large-20{
+    font-size: 300% !important;
+}
+
+.bolder-font{
+    font-weight: 450;
+}
+
+main{
+    position: relative;
+    min-height: 100vh; 
+    padding-bottom: 1rem;
+}
+
+.footer{
+    background-color: rgb(150, 145, 145) ;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    margin-top:5px;
+    padding: 8px  ;
+    bottom: 0;
+    left: 0;
+    width: 100% ; 
+    border-top: 2px solid #f69272;
+}
+
+.Copyright{
+    margin: auto 0;
+    flex: 50%;
+    font-weight:400;
+}
+
+.socials{
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+.socials-fab{
+    margin: auto 5px;
+}
+
+.follow{
+    font-size: 120%;
+    font-weight: 500;
+}   
+
+.footer a{
+    text-decoration: none;
+}
+.td-padding0{
+    padding:0;
+    margin: 0;
+    width: 10%;
+}
+.chart-img{
+    width: 80px;
+}
+
+/* #rating_div:hover > i:before {
+    color:yellow;
+}
+
+/* #rating_div > i:hover ~ i:before {
+    color: #c7c5c5;
+} */ 
+
+.rating{
+	border: none;
+    float: left;
+}
+.rating > input{
+	display: none;
+}
+
+.rating > label::after{
+	content: '\f005';
+	font-family: FontAwesome;
+	margin: 5px;
+	
+	cursor: pointer;
+}
+
+.rating > label{
+	color: rgb(201, 198, 198);
+    cursor: pointer;
+	float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label{
+	color: yellow;
+}
+
+.mobile-title{
+    font-weight:800;
+    font-size: 120%;
+    margin-bottom: 1px;
+}
+
+.fa-star{
+    color: yellow;
+}
+
+.before_rating ~ i{
+    color: rgb(201, 198, 198);
+}
+
+.mobile-info{
+    font-weight:600;
+    font-size: 120% ;
+}
+
+ @media (max-width: 767.98px){
+    .footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .follow {
+        align-self: center;
+        font-size: 100%;
+    }
+    .socials{
+        align-self: center;
+        
+    }
+    .Copyright{
+        align-self: center;
+    }
+}
+
+@media (max-width: 991.98px){
+    .footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .footer p {
+        align-self: center;
+        font-size: 100%;
+    }
+    .socials{
+        align-self: center;
+        
+    }
+    .Copyright{
+        align-self: center;
+    }
+} 
+
